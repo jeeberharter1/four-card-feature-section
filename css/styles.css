@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+/*
+    || Smaller Screens
+*/
+@media screen and (max-width: 1100px) {
+    body {
+        max-width: 20rem;
+        margin: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+/*
+    || Larger Screens
+*/
+@media screen and (min-width: 1100px) {
+    .intro {
+        max-width: 32rem;
+        margin: 0 auto;
+    }
+
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .supervisor {
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .calculator {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+}
+
+/*
+    || Global Styles
+*/
+:root {
+    --dark-blue: hsl(234, 12%, 34%);
+    --gray-blue: hsl(229, 6%, 66%);
+    --light-gray: hsl(0, 0%, 98%);
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --poppins: 'Poppins', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--poppins);
+    background: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/*
+    || Local Styles
+*/
+
+.intro {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.container {
+    display: grid;
+    gap: 25px;
+}
+
+h1 {
+    font-weight: 200;
+    color: var(--gray-blue);
+    padding-bottom: 15px;
+    line-height: 1.35;
+}
+
+h1 > span {
+    font-weight: 600;
+    color: var(--dark-blue);
+}
+
+.intro > p {
+    color: var(--gray-blue);
+    font-size: 15px;
+}
+
+.grid-item {
+    padding: 30px;
+    max-height: 20rem;
+    max-width: 20rem;
+    background: white;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 13px 17px -3px rgba(50,94,144,0.2);
+    box-shadow: 0 13px 17px -3px rgba(50,94,144,0.2);
+}
+
+.supervisor {
+    border-top: 5px solid var(--cyan);
+}
+
+.team-builder {
+    border-top: 5px solid var(--red);
+}
+
+.karma {
+    border-top: 5px solid var(--orange);
+}
+
+.calculator {
+    border-top: 5px solid var(--blue);
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--dark-blue);
+}
+
+.grid-item > p {
+    color: var(--gray-blue);
+    font-size: 13px;
+    font-weight: 400;
+    padding-top: 5px;
+}
+
+.icon-container {
+    width: 100%;
+    text-align: right;
+    padding-top: 30px;
+}
